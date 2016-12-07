@@ -38,3 +38,7 @@ jspm_packages
 
 # local configuration
 config.js
+
+# dist files
+app.js
+*.map
