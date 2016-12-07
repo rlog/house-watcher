@@ -83,7 +83,7 @@ async function fetchReslut() {
 }
 
 function msgSend(title, content) {
-    let key = require('./config.js').key;
+    let {key} = require('./config.js');
     let uri = `http://sc.ftqq.com/${key}.send`;
     superagent
         .get(uri)
@@ -101,5 +101,5 @@ function msgSend(title, content) {
         });
 }
 
-msgSend('哇哈哈', 'bababa');
-// fetchReslut();
+// msgSend('哇哈哈', 'bababa');
+fetchReslut();

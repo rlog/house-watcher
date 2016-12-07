@@ -93,9 +93,8 @@ const listId = '#ess_ctr9680_ListC_Info_LstC_Info';
 let retry = 5;
 
 function msgSend(title, content) {
-    let key = require('./config.js').key;
+    let { key } = require('./config.js');
     let uri = `http://sc.ftqq.com/${ key }.send`;
-    console.log(uri);
     superagent.get(uri).query({ text: title, desp: content }).end((err, res) => {
         let data = JSON.parse(res.text);
 
@@ -109,7 +108,7 @@ function msgSend(title, content) {
     });
 }
 
-msgSend('哇哈哈', 'bababa');
-// fetchReslut();
+// msgSend('哇哈哈', 'bababa');
+fetchReslut();
 
 //# sourceMappingURL=app.js.map
